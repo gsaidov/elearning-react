@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+/* Header Start */
+.navbar-color {
+    background-color: #f4f6ff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.link-color {
+  color: #1200ff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.link-color:hover {
+  color: #b400ff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.searchForm {
+  border-radius: 30px;
+  border-color: #1200ff;
 }
 
-.App-link {
-  color: #61dafb;
+.searchButton {
+  border-radius: 30px;
+  background-color: #f4f6ff;
+  border-color: #1200ff;
+  color: #1200ff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchButton:hover {
+  border-radius: 30px;
+  background-color: #f4f6ff;
+  border-color: #1200ff;
+  color: #b400ff;
 }
+
+.login-button {
+  border-radius: 30px;
+  border-color: #1200ff;
+}
+
+.login-button:hover {
+  background-color: #f4f6ff;
+  border-color: #b400ff;
+}
+
+.navbar-toggler-icon {
+  font-size: 1rem;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(18, 0, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler {
+  border: 1px solid #1200ff;
+}
+/* Header End */
+
+
+/* Home Start */
+.home-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 500px;
+}
+/* Home End */
+
+/* Course Start */
+.course-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 500px;
+}
+/* Course End */
+
+
+/* Footer Start */
+.site-footer {
+  background-color: #f4f6ff;
+  padding: 20px 0;
+}
+/* Footer end */
