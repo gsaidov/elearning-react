@@ -1,0 +1,39 @@
+
+.first{
+    background-color:#bbbfca;
+    text-align: center;
+    height: 40vh;
+    
+  
+  }
+  .features{
+    margin: 25px;
+  }
+
+.zar{
+    min-height: 100%;
+    flex-wrap: wrap;
+    justify-content:center;
+    display:flex;
+    
+    
+}
+.box{
+  
+  width:30%;
+}
+
+
+.render{
+    min-height: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-items:center;
+    column-gap:  50px;
+    display: flex;
+    
+}
+
+.grid > div {
+    flex-basis:calc(20% -40%);
+}
