@@ -1,36 +1,41 @@
-import React from 'react';
-import Header from './HeaderComponent';
-import Footer from './FooterComponent';
-import Home from './HomeComponent';
-import Courses from './CoursesComponent';
-import { Switch, Route, Redirect,  } from 'react-router-dom';
+import React from "react";
+import Header from "./HeaderComponent";
+import Footer from "./FooterComponent";
+import Home from "./HomeComponent";
+import Courses from "./CoursesComponent";
+import { COURSES } from "../shared/courses";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      courses: COURSES,
+    };
+  }
 
-    constructor(props) {
-        super(props);
-    }
+  render() {
+    console.log(this.state.courses);
+    const HomePage = () => {
+      return <Home />;
+    };
 
-    render() {
-
-        const HomePage = () => {
-            return (
-                <Home />
-            );
-        }
-
-        return (
-            <div>
-                <Header />
-                <Switch>
-                    <Route path='/home' component={HomePage} />
-                    <Route exact path='/courses' component={Courses} />
-                    <Redirect to='/home' />
-                </Switch>
-                <Footer />
-            </div>
-        );
-    }
+    return (
+      <div>
+        <Header />
+        <Switch>
+          <Route path="/home" component={HomePage} />
+          <Route
+            exact
+            path="/courses"
+            render={() => <Courses courses={this.state.courses} />}
+          />
+          <Redirect to="/home" />
+        </Switch>
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default Main;

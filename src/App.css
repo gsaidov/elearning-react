@@ -1,6 +1,18 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.card-title {
+  font: 450 1.5rem "Oswald", cursive;
+}
+
+.card-img-overlay .card-title {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 /* Header Start */
 .navbar-color {
-    background-color: #f4f6ff;
+  background-color: #f4f6ff;
 }
 
 .link-color {
@@ -50,7 +62,6 @@
 }
 /* Header End */
 
-
 /* Home Start */
 .home-content {
   padding: 50px 0;
@@ -60,13 +71,8 @@
 /* Home End */
 
 /* Course Start */
-.course-content {
-  padding: 50px 0;
-  border-bottom: 1px ridge;
-  min-height: 500px;
-}
-/* Course End */
 
+/* Course End */
 
 /* Footer Start */
 .site-footer {
