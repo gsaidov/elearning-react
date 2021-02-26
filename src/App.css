@@ -10,6 +10,20 @@ body {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.details-header {
+  background: linear-gradient(to right, rgb(119, 115, 115), rgb(58, 55, 55));
+  color: white;
+}
+
+.course-name {
+  font: 600 2rem "Oswald", "cursive";
+}
+.course-level {
+  border-top: 0.5px dashed white;
+  font-weight: 10;
+}
+
 /* Header Start */
 .navbar-color {
   background-color: #f4f6ff;
