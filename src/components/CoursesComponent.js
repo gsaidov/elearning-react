@@ -1,12 +1,6 @@
 import React from "react";
-import {
-  Card,
-  CardImg,
-  CardImgOverlay,
-  CardText,
-  CardBody,
-  CardTitle,
-} from "reactstrap";
+import { Card, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
+import CourseInfo from "./CourseInfoComponent";
 
 class Courses extends React.Component {
   constructor(props) {
@@ -16,21 +10,6 @@ class Courses extends React.Component {
 
   onCourseSelect(course) {
     this.setState({ selectedCourse: course });
-  }
-
-  renderSelectedCourse(course) {
-    if (course) {
-      return (
-        <Card>
-          <CardImg top src={course.image} alt={course.name} />
-          <CardBody>
-            <CardTitle className="font-weight-bold">{course.name}</CardTitle>
-            <CardText>{course.description}</CardText>
-          </CardBody>
-        </Card>
-      );
-    }
-    return <div />; // in case selected course is null
   }
 
   render() {
@@ -50,11 +29,7 @@ class Courses extends React.Component {
     return (
       <div className="container">
         <div className="row">{directory}</div>
-        <div className="row">
-          <div className="col-md-5 m-1">
-            {this.renderSelectedCourse(this.state.selectedCourse)}
-          </div>
-        </div>
+        <CourseInfo course={this.state.selectedCourse} />
       </div>
     );
   }
