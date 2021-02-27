@@ -27,10 +27,12 @@ class Courses extends React.Component {
     });
 
     return (
-      <div className="container">
-        <div className="row">{directory}</div>
+      <>
+        <div className="container">
+          <div className="row">{directory}</div>
+        </div>
         <CourseInfo course={this.state.selectedCourse} />
-      </div>
+      </>
     );
   }
 }
