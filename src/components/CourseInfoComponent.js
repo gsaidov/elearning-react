@@ -6,19 +6,19 @@ class CourseInfo extends React.Component {
     super(props);
   }
 
-  renderCourse(course) {
-    return (
-      <div className="col-md-5 m-1">
-        <Card>
-          <CardImg top src={course.image} alt={course.name} />
-          <CardBody>
-            <CardTitle className="font-weight-bold">{course.name}</CardTitle>
-            <CardText>{course.description}</CardText>
-          </CardBody>
-        </Card>
-      </div>
-    );
-  }
+  // renderCourse(course) {
+  //   return (
+  //     <div className="col-md-5 m-1">
+  //       <Card>
+  //         <CardImg top src={course.image} alt={course.name} />
+  //         <CardBody>
+  //           <CardTitle className="font-weight-bold">{course.name}</CardTitle>
+  //           <CardText>{course.description}</CardText>
+  //         </CardBody>
+  //       </Card>
+  //     </div>
+  //   );
+  // }
 
   renderSyllabus(course) {
     const parts = course.syllabus.map((part) => {
@@ -35,6 +35,66 @@ class CourseInfo extends React.Component {
       );
     });
     return parts;
+  }
+
+  renderStars(num) {
+    const stars = [];
+    for (let i = 0; i < num; i++) {
+      stars.push(<i className="fa fa-star"></i>);
+    }
+    if (num < 5) {
+      for (let i = 0; i < 5 - num; i++) {
+        stars.push(<i className="fa fa-star-o"></i>);
+      }
+    }
+    return stars;
+  }
+
+  renderReviews(reviews) {
+    const ratings = reviews.map((review) => review.rating);
+    const averageRating = ratings.reduce((a, b) => a + b, 0) / ratings.length;
+    if (reviews) {
+      return (
+        <div className="jumbotron reviews">
+          <div className="container">
+            <h4 className="font-weight-bold pb-3">Reviews</h4>
+            <div className="row">
+              <div className="col-md-3">
+                <p>
+                  <span className="h3 font-weight-bold">{averageRating}</span>
+                  {" - "}
+                  {reviews.length} reviews
+                </p>
+              </div>
+              <div className="col-md-9">
+                {reviews.map((review) => {
+                  return (
+                    <div key={review.id} className="row mb-4">
+                      <div className="col">
+                        {this.renderStars(review.rating)}
+                        <br />
+                        {review.text}
+                        <br />
+                        <br />
+                        <i>by </i>
+                        {review.author}
+                        <br />
+                        {new Intl.DateTimeFormat("en-US", {
+                          year: "numeric",
+                          month: "short",
+                          day: "2-digit",
+                        }).format(new Date(Date.parse(review.date)))}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    return <div />;
   }
 
   courseDetails(course) {
@@ -76,6 +136,7 @@ class CourseInfo extends React.Component {
             <strong>Syllabus: What You will Learn</strong>
           </h3>
           {this.renderSyllabus(this.props.course)}
+          {/* {this.renderReviews(this.props.course.reviews)} */}
         </div>
       </>
     );
@@ -87,6 +148,7 @@ class CourseInfo extends React.Component {
         <>
           {/* <div className="row">{this.renderCourse(this.props.course)}</div> */}
           {this.courseDetails(this.props.course)}
+          {this.renderReviews(this.props.course.reviews)}
         </>
       );
     } else {

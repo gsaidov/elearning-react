@@ -14,6 +14,15 @@ body {
   background: linear-gradient(to right, rgb(78, 75, 75), rgb(46, 44, 44));
   color: white;
 }
+.reviews {
+  border-radius: 0;
+  color: rgb(51, 49, 49);
+  background: #f0f0f0;
+}
+.fa-star,
+.fa-star-o {
+  color: rgb(221, 195, 48);
+}
 
 .course-name {
   font: 600 2rem "Oswald", "cursive";
