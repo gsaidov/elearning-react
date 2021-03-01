@@ -40,14 +40,16 @@ class CourseInfo extends React.Component {
   renderStars(num) {
     const stars = [];
     for (let i = 0; i < num; i++) {
-      stars.push(<i className="fa fa-star"></i>);
+      stars.push("fa fa-star");
     }
     if (num < 5) {
       for (let i = 0; i < 5 - num; i++) {
-        stars.push(<i className="fa fa-star-o"></i>);
+        stars.push("fa fa-star-o");
       }
     }
-    return stars;
+    return stars.map((star, index) => {
+      return <i key={index} className={star}></i>;
+    });
   }
 
   renderReviews(reviews) {
