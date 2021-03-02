@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer(props) {
   return (
@@ -9,16 +10,16 @@ function Footer(props) {
             <h5>About</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#">Home</a>
+                <Link to="/home">Home</Link>
               </li>
               <li>
-                <a href="#">Courses</a>
+                <Link to="Courses">Courses</Link>
               </li>
               <li>
-                <a href="#">About</a>
+                <Link to="#">About</Link>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <Link to="#">Contact</Link>
               </li>
             </ul>
           </div>
@@ -26,16 +27,16 @@ function Footer(props) {
             <h5>Community</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#">Blog</a>
+                <Link to="#">Blog</Link>
               </li>
               <li>
-                <a href="#">Partners</a>
+                <Link to="#">Partners</Link>
               </li>
               <li>
-                <a href="#">Guides</a>
+                <Link to="#">Guides</Link>
               </li>
               <li>
-                <a href="#">Developers</a>
+                <Link to="#">Developers</Link>
               </li>
             </ul>
           </div>
@@ -43,16 +44,16 @@ function Footer(props) {
             <h5>Legal</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#">Terms</a>
+                <Link to="#">Terms</Link>
               </li>
               <li>
-                <a href="#">Privacy</a>
+                <Link to="#">Privacy</Link>
               </li>
               <li>
-                <a href="#">Accessibility</a>
+                <Link to="#">Accessibility</Link>
               </li>
               <li>
-                <a href="#">Trademark</a>
+                <Link to="#">Trademark</Link>
               </li>
             </ul>
           </div>

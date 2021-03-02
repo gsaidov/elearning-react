@@ -1,19 +1,4 @@
 import React from "react";
-import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
-
-// renderCourse(course) {
-//   return (
-//     <div className="col-md-5 m-1">
-//       <Card>
-//         <CardImg top src={course.image} alt={course.name} />
-//         <CardBody>
-//           <CardTitle className="font-weight-bold">{course.name}</CardTitle>
-//           <CardText>{course.description}</CardText>
-//         </CardBody>
-//       </Card>
-//     </div>
-//   );
-// }
 
 function RenderSyllabus({ course }) {
   const parts = course.syllabus.map((part) => {
@@ -142,7 +127,6 @@ function CourseInfo(props) {
   if (props.course) {
     return (
       <>
-        {/* <div className="row">{this.renderCourse(this.props.course)}</div> */}
         <CourseDetails course={props.course} />
         <RenderReviews reviews={props.course.reviews} />
       </>

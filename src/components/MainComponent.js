@@ -4,7 +4,7 @@ import Footer from "./FooterComponent";
 import Home from "./HomeComponent";
 import Courses from "./CoursesComponent";
 import { COURSES } from "../shared/courses";
-import CourseInfo from "./CourseInfoComponent";
+// import CourseInfo from "./CourseInfoComponent";
 import { Switch, Route, Redirect } from "react-router-dom";
 
 class Main extends React.Component {
@@ -12,19 +12,13 @@ class Main extends React.Component {
     super(props);
     this.state = {
       courses: COURSES,
-      selectedCourse: null,
     };
-  }
-
-  onCourseSelect(courseId) {
-    this.setState({ selectedCourse: courseId });
   }
 
   render() {
     const HomePage = () => {
       return <Home />;
     };
-    console.log(this.state.selectedCourse);
 
     return (
       <div>
@@ -34,24 +28,7 @@ class Main extends React.Component {
           <Route
             exact
             path="/courses"
-            render={() => (
-              <Courses
-                courses={this.state.courses}
-                onClick={(courseId) => this.onCourseSelect(courseId)}
-              />
-            )}
-          />
-          <Route
-            path="/courses:courseId"
-            render={() => (
-              <CourseInfo
-                course={
-                  this.state.courses.filter(
-                    (course) => course.id === this.state.selectedCourse
-                  )[0]
-                }
-              />
-            )}
+            render={() => <Courses courses={this.state.courses} />}
           />
           <Redirect to="/home" />
         </Switch>
