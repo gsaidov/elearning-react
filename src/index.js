@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "typeface-oswald";
 import "typeface-open-sans";
 import "font-awesome/css/font-awesome.css";
+import "bootstrap-social/bootstrap-social.css";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 
