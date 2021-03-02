@@ -2,6 +2,30 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+/* Header Start */
+.navbar {
+  background-color: #f4f6ff;
+}
+.navbar .navbar-nav > li > a {
+  color: #1200ff;
+  padding: 10px;
+}
+.navbar .navbar-nav > li > a:hover {
+  color: #b400ff;
+  text-decoration: none;
+}
+
+.navbar-toggler-icon {
+  font-size: 1rem;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(18, 0, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+/* Header End */
+
+/* Home Start */
+
+/* Home End */
+
+/* Course Start */
 .card-title {
   font: 450 1.5rem "Oswald", cursive;
 }
@@ -31,74 +55,15 @@ body {
   border-top: 0.5px dashed white;
   font-weight: 10;
 }
-
-/* Header Start */
-.navbar {
-  background-color: #f4f6ff;
-}
-.navbar .navbar-nav > li > a {
-  color: #1200ff;
-  padding: 10px;
-}
-.navbar .navbar-nav > li > a:hover {
-  color: #b400ff;
-  text-decoration: none;
-}
-
-/* .searchForm {
-  border-radius: 30px;
-  border-color: #1200ff;
-}
-
-.searchButton {
-  border-radius: 30px;
-  background-color: #f4f6ff;
-  border-color: #1200ff;
-  color: #1200ff;
-}
-
-.searchButton:hover {
-  border-radius: 30px;
-  background-color: #f4f6ff;
-  border-color: #1200ff;
-  color: #b400ff;
-} */
-
-.login-button {
-  border-radius: 30px;
-  border-color: #1200ff;
-}
-
-.login-button:hover {
-  background-color: #f4f6ff;
-  border-color: #b400ff;
-}
-
-.navbar-toggler-icon {
-  font-size: 1rem;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(18, 0, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-/* .navbar-toggler {
-  border: 1px solid #1200ff;
-} */
-/* Header End */
-
-/* Home Start */
-.home-content {
-  padding: 50px 0;
-  border-bottom: 1px ridge;
-  min-height: 500px;
-}
-/* Home End */
-
-/* Course Start */
-
 /* Course End */
 
 /* Footer Start */
 .site-footer {
   background-color: #f4f6ff;
   padding: 20px 0;
+}
+
+.row-content {
+  min-height: 300px;
 }
 /* Footer end */

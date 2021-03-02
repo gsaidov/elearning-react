@@ -5,6 +5,7 @@ import Home from "./HomeComponent";
 import Courses from "./CoursesComponent";
 import { COURSES } from "../shared/courses";
 // import CourseInfo from "./CourseInfoComponent";
+import Contact from "./Contact";
 import { Switch, Route, Redirect } from "react-router-dom";
 
 class Main extends React.Component {
@@ -30,6 +31,7 @@ class Main extends React.Component {
             path="/courses"
             render={() => <Courses courses={this.state.courses} />}
           />
+          <Route exact path="/contact" component={Contact} />
           <Redirect to="/home" />
         </Switch>
         <Footer />

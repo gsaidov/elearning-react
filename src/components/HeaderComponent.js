@@ -32,7 +32,7 @@ const Header = (props) => {
               <NavLink
                 activeStyle={{
                   fontWeight: 650,
-                  color: "#b400ff",
+                  // color: "#b400ff",
                 }}
                 to="/home"
               >
@@ -43,7 +43,7 @@ const Header = (props) => {
               <NavLink
                 activeStyle={{
                   fontWeight: 650,
-                  color: "#b400ff",
+                  // color: "#b400ff",
                 }}
                 to="/courses"
               >
