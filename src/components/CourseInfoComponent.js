@@ -128,7 +128,7 @@ function CourseInfo(props) {
     return (
       <>
         <CourseDetails course={props.course} />
-        <RenderReviews reviews={props.course.reviews} />
+        <RenderReviews reviews={props.reviews} />
       </>
     );
   } else {
