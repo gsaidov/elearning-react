@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Contact = (props) => {
   return (
-    <div className="container">
-      <div className="row my-md-5 text-center">
+    <div className="container mt-5">
+      <div className="row text-center">
         <div className="col">
           <h2>Contact Us</h2>
           <hr />

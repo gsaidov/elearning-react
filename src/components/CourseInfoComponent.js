@@ -1,4 +1,6 @@
 import React from "react";
+import { Breadcrumb, BreadcrumbItem } from "reactstrap";
+import { Link } from "react-router-dom";
 
 function RenderSyllabus({ course }) {
   const parts = course.syllabus.map((part) => {
@@ -37,7 +39,7 @@ function RenderReviews({ reviews }) {
   const averageRating = ratings.reduce((a, b) => a + b, 0) / ratings.length;
   if (reviews) {
     return (
-      <div className="jumbotron reviews">
+      <div className="jumbotron reviews mb-0">
         <div className="container">
           <h4 className="font-weight-bold pb-3">Reviews</h4>
           <div className="row">
@@ -127,6 +129,18 @@ function CourseInfo(props) {
   if (props.course) {
     return (
       <>
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <Breadcrumb>
+                <BreadcrumbItem>
+                  <Link to="/courses">Courses</Link>
+                </BreadcrumbItem>
+                <BreadcrumbItem active>{props.course.name}</BreadcrumbItem>
+              </Breadcrumb>
+            </div>
+          </div>
+        </div>
         <CourseDetails course={props.course} />
         <RenderReviews reviews={props.reviews} />
       </>

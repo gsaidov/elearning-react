@@ -35,6 +35,7 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 .jumbotron {
+  border-radius: 0;
   background: linear-gradient(to right, rgb(78, 75, 75), rgb(46, 44, 44));
   color: white;
 }
@@ -67,3 +68,21 @@ body {
   min-height: 300px;
 }
 /* Footer end */
+
+.breadcrumb {
+  background-color: white;
+}
+
+.breadcrumb-item a {
+  color: #1200ff;
+  text-decoration: none;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  font-family: "FontAwesome";
+  content: "\f101";
+  color: #1200ff;
+}
+
+.breadcrumb .me {
+  background-color: black;
+}
