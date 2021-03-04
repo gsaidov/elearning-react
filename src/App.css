@@ -34,13 +34,11 @@ body {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.jumbotron {
-  border-radius: 0;
-  background: linear-gradient(to right, rgb(78, 75, 75), rgb(46, 44, 44));
+.details-header {
+  background: linear-gradient(to right, rgb(17, 17, 17), rgb(64, 64, 165));
   color: white;
 }
 .reviews {
-  border-radius: 0;
   color: rgb(51, 49, 49);
   background: #f0f0f0;
 }
@@ -69,6 +67,7 @@ body {
 }
 /* Footer end */
 
+/* Breadcrumb */
 .breadcrumb {
   background-color: white;
 }
@@ -85,4 +84,31 @@ body {
 
 .breadcrumb .me {
   background-color: black;
+}
+
+/* About Page */
+.about {
+  background: linear-gradient(to right, rgb(17, 17, 17), rgb(64, 64, 165));
+}
+.about-header {
+  font-size: 3.75rem;
+}
+@media only screen and (max-width: 600px) {
+  .about-header {
+    font-size: 1.75rem;
+  }
+}
+span {
+  color: rgb(243, 101, 7);
+}
+.beliefs {
+  background: linear-gradient(to right, rgb(63, 63, 129), rgb(64, 64, 173));
+  color: white;
+}
+.mission {
+  font-size: 1.25rem;
+}
+.beliefs .row {
+  padding: 0.75rem;
+  font-size: 1.25rem;
 }

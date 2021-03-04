@@ -39,18 +39,18 @@ function RenderReviews({ reviews }) {
   const averageRating = ratings.reduce((a, b) => a + b, 0) / ratings.length;
   if (reviews) {
     return (
-      <div className="jumbotron reviews mb-0">
+      <section className="reviews mb-0">
         <div className="container">
-          <h4 className="font-weight-bold pb-3">Reviews</h4>
+          <h4 className="font-weight-bold py-3">Reviews</h4>
           <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-4">
               <p>
                 <span className="h3 font-weight-bold">{averageRating}</span>
                 {" - "}
                 {reviews.length} reviews
               </p>
             </div>
-            <div className="col-md-9">
+            <div className="col-md-8">
               {reviews.map((review) => {
                 return (
                   <div key={review.id} className="row mb-4">
@@ -75,7 +75,7 @@ function RenderReviews({ reviews }) {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
   return <div />;
@@ -84,7 +84,7 @@ function RenderReviews({ reviews }) {
 function CourseDetails({ course }) {
   return (
     <>
-      <div className="jumbotron">
+      <section className="details-header py-5">
         <div className="container">
           <div className="row">
             <div className="col-md-5 h2 course-name">
@@ -110,7 +110,7 @@ function CourseDetails({ course }) {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <div className="container mt-3">
         <h3>
           <strong>About this Course</strong>
