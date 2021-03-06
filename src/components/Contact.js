@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Button, Form, FormGroup, Label, Input, Col } from "reactstrap";
+import {
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Col,
+  FormFeedback,
+} from "reactstrap";
 
 const Contact = (props) => {
   const [values, setValues] = useState({
@@ -10,6 +18,11 @@ const Contact = (props) => {
     agree: false,
     contactType: "By Phone",
     feedback: "",
+  });
+  const [touched, setTouched] = useState({
+    name: false,
+    phoneNum: false,
+    email: false,
   });
 
   const values_handler = (e) => {
@@ -21,6 +34,40 @@ const Contact = (props) => {
       [name]: value,
     };
     setValues(newValues);
+  };
+
+  const validate = (yourName, phoneNum, email) => {
+    const errors = {
+      yourName: "",
+      phoneNum: "",
+      email: "",
+    };
+
+    if (touched.yourName) {
+      if (yourName.length < 2) {
+        errors.yourName = "Your name must at least 2 characters.";
+      } else if (yourName.length > 25) {
+        errors.yourName = "Your name must not be more than 25 characters";
+      }
+    }
+
+    const reg = /^\d+$/;
+    if (touched.phoneNum && !reg.test(phoneNum)) {
+      errors.phoneNum = "The phone number must contain only numbers.";
+    }
+
+    if (touched.email && !email.includes("@")) {
+      errors.email = "Not a valid email address";
+    }
+
+    return errors;
+  };
+
+  const handleBlur = (field) => () => {
+    setTouched({
+      ...touched,
+      [field]: true,
+    });
   };
 
   const handleSubmit = (event) => {
@@ -37,6 +84,7 @@ const Contact = (props) => {
     });
   };
 
+  const errors = validate(values.yourName, values.phoneNum, values.email);
   return (
     <div className="container mt-5">
       <div className="row text-center">
@@ -95,8 +143,11 @@ const Contact = (props) => {
                   name="yourName"
                   placeholder="Name"
                   value={values.yourName}
+                  invalid={errors.yourName}
+                  onBlur={handleBlur("yourName")}
                   onChange={values_handler}
                 />
+                <FormFeedback>{errors.yourName}</FormFeedback>
               </Col>
             </FormGroup>
             <FormGroup row>
@@ -110,8 +161,11 @@ const Contact = (props) => {
                   name="phoneNum"
                   placeholder="Phone number"
                   value={values.phoneNum}
+                  invalid={errors.phoneNum}
+                  onBlur={handleBlur("phoneNum")}
                   onChange={values_handler}
                 />
+                <FormFeedback>{errors.phoneNum}</FormFeedback>
               </Col>
             </FormGroup>
             <FormGroup row>
@@ -125,8 +179,11 @@ const Contact = (props) => {
                   name="email"
                   placeholder="Email"
                   value={values.email}
+                  invalid={errors.email}
+                  onBlur={handleBlur("email")}
                   onChange={values_handler}
                 />
+                <FormFeedback>{errors.email}</FormFeedback>
               </Col>
             </FormGroup>
             <FormGroup row>
