@@ -10,7 +10,7 @@ import {
   FormFeedback,
 } from "reactstrap";
 
-const Contact = (props) => {
+const Contact = () => {
   const [values, setValues] = useState({
     yourName: "",
     phoneNum: "",
@@ -20,7 +20,7 @@ const Contact = (props) => {
     feedback: "",
   });
   const [touched, setTouched] = useState({
-    name: false,
+    yourName: false,
     phoneNum: false,
     email: false,
   });
@@ -81,6 +81,11 @@ const Contact = (props) => {
       agree: false,
       contactType: "",
       feedback: "",
+    });
+    setTouched({
+      yourName: false,
+      phoneNum: false,
+      email: false,
     });
   };
 
@@ -143,7 +148,7 @@ const Contact = (props) => {
                   name="yourName"
                   placeholder="Name"
                   value={values.yourName}
-                  invalid={errors.yourName}
+                  invalid={!!errors.yourName}
                   onBlur={handleBlur("yourName")}
                   onChange={values_handler}
                 />
@@ -161,7 +166,7 @@ const Contact = (props) => {
                   name="phoneNum"
                   placeholder="Phone number"
                   value={values.phoneNum}
-                  invalid={errors.phoneNum}
+                  invalid={!!errors.phoneNum}
                   onBlur={handleBlur("phoneNum")}
                   onChange={values_handler}
                 />
@@ -179,7 +184,7 @@ const Contact = (props) => {
                   name="email"
                   placeholder="Email"
                   value={values.email}
-                  invalid={errors.email}
+                  invalid={!!errors.email}
                   onBlur={handleBlur("email")}
                   onChange={values_handler}
                 />
