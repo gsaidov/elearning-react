@@ -9,7 +9,7 @@ import {
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
-const Header = (props) => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -17,7 +17,7 @@ const Header = (props) => {
   return (
     <Navbar className="navbar-color" sticky="top" expand="md">
       <div className="container-fluid">
-        <NavbarBrand className="mr-auto" href="/">
+        <NavbarBrand href="/">
           <img
             src="/assets/images/logo.png"
             height="30"
@@ -27,8 +27,8 @@ const Header = (props) => {
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav navbar>
-            <NavItem>
+          <Nav navbar className="row p-2 w-100">
+            <NavItem className="py-2">
               <NavLink
                 activeStyle={{
                   fontWeight: 650,
@@ -39,7 +39,7 @@ const Header = (props) => {
                 Home
               </NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem className="py-2">
               <NavLink
                 activeStyle={{
                   fontWeight: 650,
@@ -48,6 +48,28 @@ const Header = (props) => {
                 to="/courses"
               >
                 Courses
+              </NavLink>
+            </NavItem>
+            <NavItem className="ml-md-auto py-2">
+              <NavLink
+                activeStyle={{
+                  fontWeight: 650,
+                  // color: "#b400ff",
+                }}
+                to="/courses"
+              >
+                Sign Up
+              </NavLink>
+            </NavItem>
+            <NavItem className="py-2">
+              <NavLink
+                activeStyle={{
+                  fontWeight: 650,
+                  // color: "#b400ff",
+                }}
+                to="/login"
+              >
+                Login
               </NavLink>
             </NavItem>
           </Nav>

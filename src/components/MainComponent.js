@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./HeaderComponent";
+import Login from "./Login";
 import Footer from "./FooterComponent";
 import Home from "./HomeComponent";
 import Courses from "./CoursesComponent";
@@ -49,6 +50,7 @@ class Main extends React.Component {
             render={() => <Courses courses={this.state.courses} />}
           />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/login" component={Login} />
           <Route path="/courses/:courseId" component={CourseWithId} />
           <Route path="/about">
             <About />
