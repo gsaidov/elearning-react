@@ -56,7 +56,7 @@ const Header = () => {
                   fontWeight: 650,
                   // color: "#b400ff",
                 }}
-                to="/courses"
+                to="/signup"
               >
                 Sign Up
               </NavLink>

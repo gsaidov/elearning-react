@@ -22,7 +22,7 @@ const Login = () => {
           <div className="col-md-5">
             <p>
               Not yet registered?{" "}
-              <Link to="#" style={{ textDecoration: "none" }}>
+              <Link to="/signup" style={{ textDecoration: "none" }}>
                 <small>Create an account</small>
               </Link>
             </p>

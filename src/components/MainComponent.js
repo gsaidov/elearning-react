@@ -9,6 +9,7 @@ import { REVIEWS } from "../shared/reviews";
 import CourseInfo from "./CourseInfoComponent";
 import Contact from "./Contact";
 import About from "./About";
+import Signup from "./Signup";
 import { Switch, Route, Redirect, useParams } from "react-router-dom";
 
 class Main extends React.Component {
@@ -52,6 +53,7 @@ class Main extends React.Component {
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/login" component={Login} />
           <Route path="/courses/:courseId" component={CourseWithId} />
+          <Route path="/signup" component={Signup} />
           <Route path="/about">
             <About />
           </Route>
