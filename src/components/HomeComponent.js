@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Home(props) {
   return (
@@ -22,10 +23,12 @@ function Home(props) {
             />
           </div>
         </div>
-
-        <button className="btn btn-primary btn-lg font-weight-bold px-5 border">
+        <Link
+          to="/signup"
+          className="btn btn-primary btn-lg font-weight-bold px-5 border"
+        >
           Join Here
-        </button>
+        </Link>
       </section>
       <section className="home home-2 py-5 text-white text-center">
         <div className="container ">
