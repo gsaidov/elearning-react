@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import home1 from "../shared/home1.jpg";
 
 function Home(props) {
   return (
@@ -17,7 +18,7 @@ function Home(props) {
           </div>
           <div className="col-md-4 d-none d-sm-block">
             <img
-              src="assets/images/home1.jpg"
+              src={home1}
               className="img-fluid img-thumbnail"
               alt="Home page"
             />

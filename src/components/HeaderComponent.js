@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import logo from "../shared/logo.png";
+
 import {
   Collapse,
   Navbar,
@@ -19,7 +21,7 @@ const Header = () => {
       <div className="container-fluid">
         <NavbarBrand href="/">
           <img
-            src="/assets/images/logo.png"
+            src={logo}
             height="30"
             width="30"
             alt="Website Logo"

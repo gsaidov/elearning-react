@@ -1,8 +1,13 @@
+import calculus from "./calculus.jpg";
+import javascript from "./javascript.png";
+import python from "./python.jpg";
+import machine_learning from "./machine-learning.jpg";
 export const COURSES = [
   {
     id: 0,
     name: "Single Variable Calculus",
-    image: "/assets/images/calculus.jpg",
+    // image: "./assets/calculus.jpg",
+    image: calculus,
     instructor: "Gulom Saidov",
     level: "Beginner",
     description:
@@ -39,7 +44,7 @@ export const COURSES = [
   {
     id: 1,
     name: "Advanced Javascript",
-    image: "/assets/images/javascript.png",
+    image: javascript,
     instructor: "Andrei Ng",
     level: "Advanced",
     description:
@@ -76,7 +81,7 @@ export const COURSES = [
   {
     id: 2,
     name: "Python",
-    image: "/assets/images/python.jpg",
+    image: python,
     instructor: "Mike Brown",
     level: "Beginner",
     description:
@@ -113,7 +118,7 @@ export const COURSES = [
   {
     id: 3,
     name: "Machine Learning",
-    image: "/assets/images/machine-learning.jpg",
+    image: machine_learning,
     instructor: "Gerard Kim",
     level: "Intermediate",
     description:
