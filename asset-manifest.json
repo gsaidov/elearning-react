@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/elearning-react/static/css/main.99d4121d.chunk.css",
-    "main.js": "/elearning-react/static/js/main.85beae8d.chunk.js",
-    "main.js.map": "/elearning-react/static/js/main.85beae8d.chunk.js.map",
+    "main.js": "/elearning-react/static/js/main.edc89256.chunk.js",
+    "main.js.map": "/elearning-react/static/js/main.edc89256.chunk.js.map",
     "runtime-main.js": "/elearning-react/static/js/runtime-main.f765992d.js",
     "runtime-main.js.map": "/elearning-react/static/js/runtime-main.f765992d.js.map",
     "static/css/2.81ed48fd.chunk.css": "/elearning-react/static/css/2.81ed48fd.chunk.css",
@@ -14,7 +14,10 @@
     "static/css/2.81ed48fd.chunk.css.map": "/elearning-react/static/css/2.81ed48fd.chunk.css.map",
     "static/css/main.99d4121d.chunk.css.map": "/elearning-react/static/css/main.99d4121d.chunk.css.map",
     "static/js/2.a6d27814.chunk.js.LICENSE.txt": "/elearning-react/static/js/2.a6d27814.chunk.js.LICENSE.txt",
+    "static/media/calculus.ec1ebd81.jpg": "/elearning-react/static/media/calculus.ec1ebd81.jpg",
     "static/media/font-awesome.css": "/elearning-react/static/media/fontawesome-webfont.f691f37e.woff",
+    "static/media/home1.4dfbaf17.jpg": "/elearning-react/static/media/home1.4dfbaf17.jpg",
+    "static/media/logo.94741649.png": "/elearning-react/static/media/logo.94741649.png",
     "static/media/index.css": "/elearning-react/static/media/oswald-latin-700.f9aecc9a.woff",
     "static/media/App.css": "/elearning-react/static/media/tianyi-ma-WiONHd_zYI4-unsplash.97f7370f.jpg"
   },
@@ -23,6 +26,6 @@
     "static/css/2.81ed48fd.chunk.css",
     "static/js/2.a6d27814.chunk.js",
     "static/css/main.99d4121d.chunk.css",
-    "static/js/main.85beae8d.chunk.js"
+    "static/js/main.edc89256.chunk.js"
   ]
 }
